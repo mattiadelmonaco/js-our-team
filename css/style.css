@@ -1,5 +1,12 @@
-h1 {
+/* GENERAL */
+
+body {
     font-family: "Fredoka", serif;
+}
+
+/* TYPOGRAPHY */
+
+h1 {
     font-weight: bold;
     margin: 1.875rem;
     text-align: center;
@@ -11,7 +18,34 @@ header p {
     margin-bottom: 1.875rem;
 }
 
+/* HEADER */
+
 header {
     position: sticky;
     background-color: #fff;
+}
+
+/* MAIN */
+
+.ms-card h4 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.ms-card-info p, .ms-card-info h4 {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.ms-card-info p {
+    padding-bottom: 1.25rem;
+}
+
+.ms-card-info a {
+    text-decoration: none;
+    color: #6ECBF2;
+}
+
+.ms-card-info {
+    padding: 1.5rem .625rem .625rem .625rem;
 }
