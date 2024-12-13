@@ -5,6 +5,30 @@
 // Rendere l’esercizio responsive, mandando a capo le card
 // Aggiungere un form di aggiunta membri che permetta di visualizzare il nuovo membro sulla pagina
 
+// FUNCTIONS 
+
+function newCardMember (member) {
+  const {name, role, email, img} = member
+  const newCard = `
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="ms-card bg-black d-flex">
+      <div class="zoom">
+          <img class="img-fluid" src="${img}" alt="${name}">
+      </div>
+      <div class="ms-card-info py-lg-0 d-flex flex-column justify-content-between">
+          <div>
+          <h4 class="pt-lg-2 pt-xl-3">${name}</h4>
+          <p class="pb-lg-2">${role}</p>
+          </div>
+          <a class="pb-lg-0 pb-xl-2" href="#">${email}</a>
+      </div>
+  </div>
+</div>
+`
+
+return newCard
+}
+
 // DOM ELEMENTS
 
 const teamCardsList = document.getElementById("team-cards-list")
@@ -55,23 +79,7 @@ const teamMembers = [
 
 let memberCards = ""
 for (let i = 0; i < teamMembers.length; i++) {
-  const {name, role, email, img} = teamMembers[i]
-  memberCards += `
-<div class="col-12 col-md-6 col-lg-4">
-  <div class="ms-card bg-black d-flex">
-      <div class="zoom">
-          <img class="img-fluid" src="${img}" alt="${name}">
-      </div>
-      <div class="ms-card-info py-lg-0 d-flex flex-column justify-content-between">
-          <div>
-          <h4 class="pt-lg-2 pt-xl-3">${name}</h4>
-          <p class="pb-lg-2">${role}</p>
-          </div>
-          <a class="pb-lg-0 pb-xl-2" href="#">${email}</a>
-      </div>
-  </div>
-</div>
-`
+  memberCards += newCardMember(teamMembers[i])
 }
   
 teamCardsList.innerHTML = memberCards
