@@ -49,3 +49,17 @@ header {
 .ms-card-info {
     padding: 1.5rem .625rem .625rem .625rem;
 }
+
+.zoom {
+    overflow: hidden;
+}
+
+#team-cards-list img {
+    cursor: pointer;
+    transition: 2s;
+    overflow: auto;
+}
+
+#team-cards-list img:hover {
+    transform: scale(1.3);
+}
