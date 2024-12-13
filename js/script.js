@@ -55,19 +55,19 @@ const teamMembers = [
 
 let memberCards = ""
 for (let i = 0; i < teamMembers.length; i++) {
-  const member = teamMembers[i]
+  const {name, role, email, img} = teamMembers[i]
   memberCards += `
 <div class="col-12 col-md-6 col-lg-4">
   <div class="ms-card bg-black d-flex">
       <div class="zoom">
-          <img class="img-fluid" src="${teamMembers[i]["img"]}" alt="${teamMembers[i]["name"]}">
+          <img class="img-fluid" src="${img}" alt="${name}">
       </div>
       <div class="ms-card-info py-lg-0 d-flex flex-column justify-content-between">
           <div>
-          <h4 class="pt-lg-2 pt-xl-3">${teamMembers[i]["name"]}</h4>
-          <p class="pb-lg-2">${teamMembers[i]["role"]}</p>
+          <h4 class="pt-lg-2 pt-xl-3">${name}</h4>
+          <p class="pb-lg-2">${role}</p>
           </div>
-          <a class="pb-lg-0 pb-xl-2" href="#">${teamMembers[i]["email"]}</a>
+          <a class="pb-lg-0 pb-xl-2" href="#">${email}</a>
       </div>
   </div>
 </div>
