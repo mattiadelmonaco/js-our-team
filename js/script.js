@@ -37,6 +37,7 @@ const newMemberNameElm = document.getElementById("new-member-name")
 const newMemberRoleElm = document.getElementById("new-member-role")
 const newMemberEmailElm = document.getElementById("new-member-email")
 const newMemberImgElm = document.getElementById("new-member-img")
+const btnShowFormElm = document.getElementById("btn-show-form")
 
 // VARIABLES
 
@@ -109,4 +110,11 @@ formAddMemberElm.addEventListener("submit", function(event) {
   teamMembers.push(newMember)
   teamCardsListElm.innerHTML += newCardMember(newMember)
 
+})
+
+// event to show form add member
+
+btnShowFormElm.addEventListener("click", function() {
+  btnShowFormElm.classList.add("d-none")
+  formAddMemberElm.classList.remove("d-none")
 })
