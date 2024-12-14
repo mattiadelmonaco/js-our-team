@@ -39,6 +39,12 @@ header {
 
 /* SECTION TEAM CARDS */
 
+.ms-card {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
 .ms-card h4 {
     font-weight: 600;
     text-transform: uppercase;
