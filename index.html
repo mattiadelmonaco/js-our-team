@@ -43,20 +43,20 @@
             <h2>Aggiungi un nuovo membro</h2>
             <form>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="new-member-name" placeholder="name@example.com">
-                    <label for="new-member-name">Nome</label>
+                    <input type="text" class="form-control" id="new-member-name" placeholder="Nome e cognome" required>
+                    <label for="new-member-name">Nome e cognome</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="new-member-role" placeholder="name@example.com">
+                    <input type="text" class="form-control" id="new-member-role" placeholder="Ruolo" required>
                     <label for="new-member-role">Ruolo</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="new-member-email" placeholder="name@example.com">
+                    <input type="email" class="form-control" id="new-member-email" placeholder="Email" required>
                     <label for="new-member-email">Email</label>
                 </div>
-                <div class="mb-3">
-                    <label for="formFileLg" class="form-label px-2">Immagine profilo membro</label>
-                    <input class="form-control form-control-lg" id="formFileLg" type="file">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="new-member-img" placeholder="URL immagine profilo nuovo membro" required>
+                    <label for="new-member-img">URL immagine profilo nuovo membro</label>
                 </div>
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn btn-add-member">Aggiungi membro <span class="symbol-plus">+</span></button>

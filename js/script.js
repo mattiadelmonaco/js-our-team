@@ -31,8 +31,12 @@ return newCard
 
 // DOM ELEMENTS
 
-const teamCardsList = document.getElementById("team-cards-list")
-
+const teamCardsListElm = document.getElementById("team-cards-list")
+const formAddMemberElm = document.getElementById("form-add-member")
+const newMemberNameElm = document.getElementById("new-member-name")
+const newMemberRoleElm = document.getElementById("new-member-role")
+const newMemberEmailElm = document.getElementById("new-member-email")
+const newMemberImgElm = document.getElementById("new-member-img")
 
 // VARIABLES
 
@@ -83,7 +87,26 @@ for (let i = 0; i < teamMembers.length; i++) {
   memberCards += newCardMember(teamMembers[i])
 }
   
-teamCardsList.innerHTML = memberCards
+teamCardsListElm.innerHTML = memberCards
 
-// Form to add a new member 
+// Form's submit to add a new member 
 
+formAddMemberElm.addEventListener("submit", function(event) {
+  event.preventDefault()
+
+  const nameNewMember = newMemberNameElm.value
+  const roleNewMember = newMemberRoleElm.value
+  const emailNewMember = newMemberEmailElm.value
+  const imgNewMember = newMemberImgElm.value 
+
+  const newMember = {
+    name: nameNewMember,
+    role: roleNewMember,
+    email: emailNewMember,
+    img: imgNewMember
+  }
+
+  teamMembers.push(newMember)
+  teamCardsListElm.innerHTML += newCardMember(newMember)
+
+})
