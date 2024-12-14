@@ -76,6 +76,7 @@ const teamMembers = [
 ];
 
 // LOGIC
+// Member list
 
 let memberCards = ""
 for (let i = 0; i < teamMembers.length; i++) {
@@ -83,3 +84,6 @@ for (let i = 0; i < teamMembers.length; i++) {
 }
   
 teamCardsList.innerHTML = memberCards
+
+// Form to add a new member 
+
