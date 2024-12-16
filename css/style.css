@@ -41,8 +41,6 @@ header {
 
 .ms-card {
     height: 100%;
-    display: flex;
-    align-items: center;
 }
 
 .ms-card h4 {
@@ -70,12 +68,15 @@ header {
 
 .zoom {
     overflow: hidden;
+    height: 100%
+
 }
 
 #team-cards-list img {
     cursor: pointer;
     transition: 2s;
     overflow: auto;
+    height: 100%;
 }
 
 #team-cards-list img:hover {
